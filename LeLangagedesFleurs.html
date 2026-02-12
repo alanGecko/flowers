@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Langage des Fleurs</title>
+    <link rel="stylesheet" href="flowers.css">
+</head>
+<body>
+    <div class="header">
+        <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="jp">日本語 (WIP)</option>
+        </select>
+        <h1>Le Langage des Fleurs</h1>
+        <div style="margin-top:12px; display:flex; justify-content:center; gap:8px;">
+            <input id="search-box" type="search" data-lang="searchplaceholder" placeholder="Search flowers or meanings..." style="padding:8px 12px; border:2px solid #e0e0e0; border-radius:6px; width:260px;">
+            <button id="search-button" data-lang="search" style="padding:9px 16px; border-radius:6px;">Search</button>
+            <button id="clear-search" data-lang="clear" style="padding:9px 12px; border-radius:6px; background:#f0f0f0; color:#333;">Clear</button>
+        </div><br>
+        <p data-lang="LeLangagedesFleursabout"></p><br>
+        <button onclick="index()" data-lang="home"></button>
+    </div>
+    <div class="content">
+        <p id="no-results" data-lang="noresults" style="display:none; text-align:center; margin-bottom:8px; color:#c9184a;"></p>
+        <div id="search-results" style="margin-top:6px; text-align:left; max-width:900px; margin-left:auto; margin-right:auto;"></div>
+        <h2 data-lang="historytitle"></h2>
+        <p data-lang="historycontent"></p>
+        <details>
+            <summary data-lang="LelangagedesFleursbook"></summary>
+            <div class="flowers">
+                <details>
+                    <summary data-lang="LelangagedesFleursbookone"></summary>
+                    <div class="pdf-container">
+                        <iframe src="frenchbook.pdf" title="Le Langage des Fleurs - French edition"style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                    </div>
+                </details>
+                <details>
+                    <summary data-lang="LelangagedesFleursbookonetwo"></summary>
+                    <div class="pdf-container">
+                        <iframe src="BookEnglish.pdf" title="Le Langage des Fleurs - English edition" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                    </div>
+                </details>
+            </div>
+        </details>
+        <div class="flowers">
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursredrose"></h2>
+                <p data-lang="LelangagedesFleursredrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleurswhiterose"></h2>
+                <p data-lang="LelangagedesFleurswhiterosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursyellowrose"></h2>
+                <p data-lang="LelangagedesFleursyellowrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleurspinkrose"></h2>
+                <p data-lang="LelangagedesFleurspinkrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleurslavenderrose"></h2>
+                <p data-lang="LelangagedesFleurslavenderrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursorangerose"></h2>
+                <p data-lang="LelangagedesFleursorangerosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursPeachrose"></h2>
+                <p data-lang="LelangagedesFleursPeachrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursblackrose"></h2>
+                <p data-lang="LelangagedesFleursblackrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursgreenrose"></h2>
+                <p data-lang="LelangagedesFleursgreenrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleurscrimsonrose"></h2>
+                <p data-lang="LelangagedesFleurscrimsonrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagesdesFleurscoralrose"></h2>
+                <p data-lang="LelangagesdesFleurscoralrosetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursrosebud"></h2>
+                <p data-lang="LelangagedesFleursrosebudtwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="LelangagedesFleursdriedwhiterose"></h2>
+                <p data-lang="LelangagedesFleursdriedwhiterosetwo"></p>
+            </div>
+        </div>
+    </div>
+    <script src="flowers.js"></script>
+</body>
+</html>

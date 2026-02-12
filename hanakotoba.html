@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanakotoba</title>
+    <link rel="stylesheet" href="flowers.css">
+</head>
+<body>
+    <div class="header">
+        <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="jp">日本語 (WIP)</option>
+        </select>
+        <div style="margin-top:12px; display:flex; justify-content:center; gap:8px;">
+            <input id="search-box" type="search" data-lang="searchplaceholder" placeholder="Search flowers or meanings..." style="padding:8px 12px; border:2px solid #e0e0e0; border-radius:6px; width:260px;">
+            <button id="search-button" data-lang="search" style="padding:9px 16px; border-radius:6px;">Search</button>
+            <button id="clear-search" data-lang="clear" style="padding:9px 12px; border-radius:6px; background:#f0f0f0; color:#333;">Clear</button>
+        </div>
+        <h1 data-lang="hanakotoba"></h1>
+        <p data-lang="hanakotobatitle"></p><br>
+        <button onclick="index()" data-lang="home"></button>
+    </div>
+    <div class="content">
+        <p id="no-results" data-lang="noresults" style="display:none; text-align:center; margin-bottom:8px; color:#c9184a;"></p>
+        <div id="search-results" style="margin-top:6px; text-align:left; max-width:900px; margin-left:auto; margin-right:auto;"></div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaAcanthus"></h2>
+            <p data-lang="hanakotobaAcanthustwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaadonis"></h2>
+            <p data-lang="hanakotobaadonistwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobagapanthus"></h2>
+            <p data-lang="hanakotobagapanthustwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaAllium"></h2>
+            <p data-lang="hanakotobaAlliumtwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaAlthaea"></h2>
+            <p data-lang="hanakotobaAlthaetwo"></p>
+        </div>
+        <div class="flowers">
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAlstroemeria"></h2>
+                <p data-lang="hanakotobaAlstroemeriatwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAlstroemeriapink"></h2>
+                <p data-lang="hanakotobaAlstroemeriapinktwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAlstroemeriaorange"></h2>
+                <p data-lang="hanakotobaAlstroemeriaorangetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAlstroemeriared"></h2>
+                <p data-lang="hanakotobaAlstroemeriaredtwo"></p>
+            </div>
+        </div>
+        <div class="flowers">
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAnemone"></h2>
+                <p data-lang="hanakotobaAnemonetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAnemonered"></h2>
+                <p data-lang="hanakotobaAnemoneredtwo"></p>
+            </div>
+                <div class="flowers">
+                <h2 data-lang="hanakotobaAnemonewhite"></h2>
+                <p data-lang="hanakotobaAnemonewhitetwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAnemonepurple"></h2>
+                <p data-lang="hanakotobaAnemonepurpletwo"></p>
+            </div>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaAmaryllis"></h2>
+            <p data-lang="hanakotobaAmaryllistwo"></p>
+        </div>
+        <div class="flowers">
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAnthurium"></h2>
+                <p data-lang="hanakotobaAnthuriumtwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAnthuriumred"></h2>
+                <p data-lang="hanakotobaAnthuriumredtwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAnthuriumwhite"></h2>
+                <p data-lang="hanakotobaAnthuriumwhitetwo"></p>
+            </div> 
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAnthuriumpink"></h2>
+                <p data-lang="hanakotobaAnthuriumpinktwo"></p>
+            </div>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaApple"></h2>
+            <p data-lang="hanakotobaAppletwo"></p>
+            <h2 data-lang="hanakotobaAppletree"></h2>
+            <p data-lang="hanakotobaAppletreetwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaApricot"></h2>
+            <p data-lang="hanakotobaApricottwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaAster"></h2>
+            <p data-lang="hanakotobaAstertwo"></p>
+        </div>
+        <div class="flowers">
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAzalea"></h2>
+                <p data-lang="hanakotobaAzaleatwo"></p>
+            </div>
+            <div class="flowers">
+                <h2 data-lang="hanakotobaAzaleawhite"></h2>
+                <p data-lang="hanakotobaAzaleawhitetwo"></p>
+            </div>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBabyblueeyes"></h2>
+            <p data-lang="hanakotobaBabyblueeyestwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBabybreath"></h2>
+            <p data-lang="hanakotobaBabybreathtwo"></p>
+            <h2 data-lang="hanakotobaPinkbabybreath"></h2>
+            <p data-lang="hanakotobaPinkbabybreathtwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBallonflower"></h2>
+            <p data-lang="hanakotobaBallonflowertwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBabyblueeyes"></h2>
+            <p data-lang="hanakotobaBabyblueeyestwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBabybreath"></h2>
+            <p data-lang="hanakotobaBabybreathtwo"></p>
+            <h2 data-lang="hanakotobaPinkbabybreath"></h2>
+            <p data-lang="hanakotobaPinkbabybreathtwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBallonflower"></h2>
+            <p data-lang="hanakotobaBallonflowertwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBalsam"></h2>
+            <p data-lang="hanakotobaBalsamtwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBamboo"></h2>
+            <p data-lang="hanakotobaBambootwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBegonia"></h2>
+            <p data-lang="hanakotobaBegoniatwo"></p>
+            <h2 data-lang="hanakotobaBegoniared"></h2>
+            <p data-lang="hanakotobaBegoniaredtwo"></p>
+            <h2 data-lang="hanakotobaBegoniawhite"></h2>
+            <p data-lang="hanakotobaBegoniawhitetwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBindweed"></h2>
+            <p data-lang="hanakotobaBindweedtwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobastrelitzia"></h2>
+            <p data-lang="hanakotobastrelitziatwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBluebell"></h2>
+            <p data-lang="hanakotobaBluebelltwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobabougainvillea"></h2>
+            <p data-lang="hanakotobabougainvilleatwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobabouvardia"></h2>
+            <p data-lang="hanakotobabouvardiatwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobabroom"></h2>
+            <p data-lang="hanakotobabroomtwo"></p>
+        </div>
+        <div class="flowers">
+            <h2 data-lang="hanakotobaBurdock"></h2>
+            <p data-lang="hanakotobaBurdocktwo"></p>
+        </div>
+    </div>
+    <script src="flowers.js"></script>
+</body>
+</html>

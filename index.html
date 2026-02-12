@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Langage des Fleurs</title>
+    <link rel="stylesheet" href="flowers.css">
+</head>
+<body>
+    <div class="header">
+        <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="jp">日本語 (WIP)</option>
+        </select>
+        <h1 data-lang="welcome"></h1>
+        <p data-lang="about"></p>
+        <p data-lang="contact"></p><br>
+        <button onclick="LeLangagedesFleurs()">Le Langage des Fleurs</button><br><br>
+        <button onclick="hanakotoba()" data-lang="hanakotobabutton">Hanakotoba</button>
+    </div>
+    <details>
+        <summary data-lang="websitehistorysummary"></summary>
+            <div class="websitehistory">
+                <p id="no-results" data-lang="noresults" style="display:none; text-align:center; margin-bottom:8px; color:#c9184a;"></p>
+                <div id="search-results" style="margin-top:6px; text-align:left; max-width:900px; margin-left:auto; margin-right:auto;"></div>
+                <div class="flowers">
+                    <h2 data-lang="websitehistorytitle"></h2>
+                    <h3 data-lang="pre-1.0"></h3>
+                    <ul>
+                        <li data-lang="log1"></li>
+                        <li data-lang="log2"></li>
+                        <li data-lang="log3"></li>
+                        <li data-lang="log4"></li>
+                        <li data-lang="log5"></li>
+                        <li data-lang="log6"></li>
+                        <li data-lang="log7"></li>
+                        <li data-lang="log8"></li>
+                        <li data-lang="log9"></li>
+                        <li data-lang="log10"></li>
+                    </ul>
+                </div>                   
+            </div>
+    </details>
+    <script src="flowers.js"></script>
+</body>
+</html>
